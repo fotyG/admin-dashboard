@@ -6,8 +6,9 @@ html {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 .sidebar {
-  background-color: rgb(25,146,212);
+  background: linear-gradient(90deg, rgba(33, 150, 243, 1) 0%, rgba(103, 58, 183, 1) 100%);;
   grid-column: 1;
   grid-row: span 2;
 }
@@ -64,7 +65,7 @@ i > svg {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
-  border-left: 8px solid rgb(240,180,41);
+  border-left: 8px solid rgb(119, 59, 168);
   box-shadow: 1px 2px 5px gray;
 }
 
@@ -183,7 +184,7 @@ i > svg {
 
 .profile-pic {
   width: 30px;
-  
+  display: flex;
 }
 
 .profile-image {
@@ -210,7 +211,7 @@ i > svg {
   position: relative;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 7px;
   overflow: hidden;
   padding: 3px;
   isolation: isolate;
@@ -223,9 +224,9 @@ i > svg {
   left: 0;
   width: 400%;
   height: 100%;
-  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background: linear-gradient(115deg,#4f9ccf,#8c34b4,#a767e5,#12bcfe,#9939b1);
   background-size: 25% 100%;
-  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation: button-rule .75s linear infinite;
   animation-play-state: paused;
   translate: -5% 0%;
   transition: translate 0.25s ease-out;
@@ -237,7 +238,7 @@ i > svg {
   translate: 0% 0%;
 }
 
-@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+@keyframes button-rule {
   to {
     transform: translateX(-25%);
   }
@@ -248,7 +249,65 @@ i > svg {
   display: block;
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  background: rgb(25,146,212);
-  border-radius: 3px;
+  background: rgba(103, 58, 183, 1);
+  border-radius: 5px;
   height: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.bell {
+  width: 20px;
+  display: flex;
+}
+
+svg:hover {
+  cursor: pointer;
+  fill: rgba(103, 58, 183, 1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-pic {
+  display: flex;
+  width: 30px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: white;
+  fill: white;
+  padding: 30px;
+}
+
+.sidebar svg:hover {
+  fill: white;
+  cursor: default;
+}
+
+.sub-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-icon {
+  width: 20px;
+  display: flex;
+}
+
+.menu, .settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
